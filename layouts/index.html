@@ -1,0 +1,580 @@
+
+
+{{ define "main" }} 
+<header class="Home-Section-1">
+  <div class="card">
+    <img src="{{ .Params.header_image }}" class="card-img img-fluid" alt="home header">
+    <div class="card-img-overlay">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-9 col-xl-7">
+            <h1 class="White-Heading-H1">{{ .Params.header_heading }}</h1>
+            <p class="White-Dark-Paragraph-P1">{{ .Params.header_content }}</p>
+            <button type="button" class="btn btn-primary Common-Button-1" data-bs-toggle="modal"
+              data-bs-target="#contact-form">Explore Automation</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="Home-Section-2">
+  <div class="container my-5">
+    <div class="row justify-content-xl-center align-self-xl-center Total-User">
+      <div class="col-12 col-md-4 col-xl-3 d-flex justify-content-center">
+        <div class="d-flex justify-content-md-center">
+          <div class="text-center Total-User-Image-Div">
+            <img src="{{ .Params.user_image }}" class="img-fluid "
+              alt="Global Enterprise Customer" />
+          </div>
+          <div>
+            <label>{{ .Params.users }}</label>
+            <p>{{ .Params.user_heading }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-xl-3 Border-Class d-flex justify-content-center">
+        <div class="d-flex justify-content-md-center">
+          <div class="text-center Total-User-Image-Div">
+            <img src="{{ .Params.man_hours_image }}" class="img-fluid"
+              alt="Global Enterprise Customer" />
+          </div>
+          <div>
+            <label>{{ .Params.man_hours }}</label>
+            <p>{{ .Params.man_hours_title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4 col-xl-3 d-flex justify-content-center">
+        <div class="d-flex justify-content-md-center">
+          <div class="text-center Total-User-Image-Div">
+            <img src="{{ .Params.automated_trips_image }}" class="img-fluid"
+              alt="Active Fero Users" />
+          </div>
+          <div>
+            <label>{{ .Params.automated_trips }}</label>
+            <p>{{ .Params.automated_trips_title }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-10 mb-5 ">
+  <div class="container">
+    <div class="row justify-content-xl-between">
+      <div class="col-12 col-xl-6 text-center text-xl-start">
+
+        <img src="{{ .Params.why_now_image }}" class="img-fluid Why-Now-Image" />
+
+        <!-- <iframe allowfullscreen="" frameborder="0" class="mb-4 mb-xl-0"
+          src="https://www.youtube-nocookie.com/embed/OAzK1XGUXfg?autoplay=1&amp;mute=1&amp;loop=1&amp;playlist=OAzK1XGUXfg"></iframe> -->
+      </div>
+
+      <div class="col-12 col-xl-5 mt-5 my-xl-0">
+        <div class="row flex-xl-column justify-content-around Content-Div mt-4 mt-xl-0">
+          <div class="col-10 col-md-5 col-xl-11 d-flex align-items-center mb-4 mb-xl-0">
+            <h4 class="Dark-Heading-H4">Reduce your operational cost by <span class="Tia-Color">25%</span></h4>
+          </div>
+
+          <div class="col-10 col-md-5 col-xl-11 d-flex align-items-center">
+            <h4 class="Dark-Heading-H4">Improve Logistics efficiency by <span class="Tia-Color">20%</span></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 ">
+        <img src="/images/home_page_frame.png" class="img-fluid Image-Frame" alt="Image Frame" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-3">
+  <div class="container">
+    <div class="row justify-content-lg-around Home-Why-Us">
+      <div class="col-12 col-xl-6">
+        <h2 class="Dark-Heading-H2">{{ .Params.why_choose_us_title }}</h2>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.why_choose_us_content1 }}</p>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.why_choose_us_content2 }}</p>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.why_choose_us_content3 }}</p>
+      </div>
+
+      <div class="col-12 col-lg-7 col-xl-5 my-5 my-xl-0">
+        <div class="row">
+          <div class="col-6" style="border-right: 1px solid #E0EFFF; border-bottom: 1px solid #E0EFFF;">
+            <div class="text-center">
+              <img src="{{ .Params.operations_image }}" class="img-fluid" />
+              <h6 class="mt-4"><strong>20</strong>% Reduction in <br>manual operations</h6>
+            </div>
+          </div>
+
+          <div class="col-6" style="border-bottom: 1px solid #E0EFFF;">
+            <div class="text-center">
+              <img src="{{ .Params.data_image }}" class="img-fluid" />
+              <h6 class="mt-4"><strong>100</strong>% Streamlined <br>realtime data analysis</h6>
+            </div>
+          </div>
+
+          <div class="col-6" style="border-right: 1px solid #E0EFFF;">
+            <div class="text-center">
+              <img src="{{ .Params.efficiency_image }}" class="img-fluid mt-3" />
+              <h6 class="mt-4"><strong>23</strong>% Increase in <br>planning efficiency</h6>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="text-center">
+              <img src="{{ .Params.cost_image }}" class="img-fluid mt-3" />
+              <h6 class="mt-4"><strong>25</strong>% Operation <br>cost savings</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="{{ .Params.frame_image }}" class="img-fluid Image-Frame" alt="Image Frame" />
+
+    <div class="row justify-content-xl-around Home-Why-Now">
+      <div class="col-12 col-xl-6">
+
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="{{ .Params.why_now_youtube_link }}" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="col-12 col-xl-5 align-self-xl-center mt-5 mt-xl-0">
+        <h2 class="Dark-Heading-H2">{{ .Params.why_now_heading }}</h2>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.why_now_content1 }}</p>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.why_now_content2 }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-7 col-lg-8 text-center text-md-start align-self-md-center">
+        <h3>{{ .Params.ceo_heading }}</h3>
+      </div>
+      <div class="col-12 col-md-5 col-lg-4 text-center d-md-flex align-items-md-center justify-content-md-end">
+        <img src="{{ .Params.ceo_image }}" class="img-fluid order-0 order-md-1" alt="CEO">
+        <h6 class="order-0">{{ .Params.ceo_content }}</h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-5">
+  <div class="container">
+    <div class="row justify-content-around">
+      <div class="col-12 col-xl-5">
+        <h2 class="Dark-Heading-H2">{{ .Params.how_we_do_it_heading }}</h2>
+        <p class="Light-Dark-Paragraph-P2">{{ .Params.how_we_do_it_content1 }}</p>
+        <p class="Light-Dark-Paragraph-P2"> {{ .Params.how_we_do_it_content2 }}</p>
+
+        <a href="about_rpa/index.html"><button type="button" class="btn btn-primary Common-Button-1">Learn
+            More</button></a>
+      </div>
+
+      <div class="col-12 col-xl-6 text-center">
+        <img src="{{ .Params.why_do_we_do_it_image }}" class="img-fluid Why-Do-We-Do-It" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-6 pt-4 pt-xl-5">
+  <div class="container">
+
+    <div class="text-center">
+      <h2 class="Dark-Heading-H2 mb-3">{{ .Params.solutions_heading }}</h2>
+      <a href="rpa_journey/index.html" class="Action-Link">
+        {{ .Params.solutions_link_title }} <i class="mdi mdi-chevron-right"></i>
+      </a>
+    </div>
+
+    <div class="row justify-content-lg-center mt-4 g-2 g-md-5 g-xl-4">
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.transporters_image }}" class="img-fluid" />
+          <h4>{{ .Params.transporters_title }}</h4>
+        </div>
+      </div>
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto ">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.distributors_image }}" class="img-fluid" />
+          <h4>{{ .Params.distributors_title }}</h4>
+        </div>
+      </div>
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.manufacturers_image }}" class="img-fluid" />
+          <h4>{{ .Params.manufacturers_title }}</h4>
+        </div>
+      </div>
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.couriers_image }}" class="img-fluid" />
+          <h4>{{ .Params.couriers_title }}</h4>
+        </div>
+      </div>
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.ports_image }}" class="img-fluid" />
+          <h4>{{ .Params.ports_title }}</h4>
+        </div>
+      </div>
+      <div class="col-6 col-lg-5 col-xl-4 col-xxl-auto">
+        <div class="img-hover-zoom">
+          <img src="{{ .Params.global_freight }}" class="img-fluid" />
+          <h4>{{ .Params.global_title }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="Home-Section-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1 class="Home-Page-Heading">{{ .Params.clients_heading }}</h1>
+      </div>
+      <div class="col-12">
+        <section class="customer-logos slider">
+          <div class="slide">
+            <img src="{{ .Params.client_logo1 }}" class="img-fluid"
+              alt="ad hotel group automation by fero" id="Image1" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo2 }}" class="img-fluid"
+              alt="ad hotel group automation by fero" id="Image2" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo3 }}" class="img-fluid"
+              alt="black pearl ai automated by fero" id="Image3" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo4 }}" class="img-fluid" alt="bollore" id="Image4"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo5 }}" class="img-fluid"
+              alt="century express automated by fero" id="Image5" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo6 }}" class="img-fluid" alt="chefme" id="Image6"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo7 }}" class="img-fluid" alt="century" id="Image7"
+              onclick="imageChange(event)" />
+          </div>
+
+          <div class="slide">
+            <img src="{{ .Params.client_logo8 }}" class="img-fluid" alt="emirates" id="Image8"
+              onclick="imageChange(event)" />
+          </div>
+
+          <div class="slide">
+            <img src="{{ .Params.client_logo9 }}" class="img-fluid"
+              alt="fendale automated operation by fero" id="Image9" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo10 }}" class="img-fluid"
+              alt="fendale automated operation by fero" id="Image10" onclick="imageChange(event)" />
+          </div>
+
+          <div class="slide">
+            <img src="{{ .Params.client_logo11 }}" class="img-fluid"
+              alt="fendale automated operation by fero" id="Image11" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo12 }}" class="img-fluid" alt="gulf_cryo" id="Image12"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo13 }}"
+              class="img-fluid" alt="gulftainer automated operation powered by fero" id="Image13"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo14 }}"
+              class="img-fluid" alt="novatis logo fgd distribution automated by fero" id="Image14"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img
+              src="{{ .Params.client_logo15 }}"
+              class="img-fluid" alt="perfetto trading llc delivery and operation automation by fero" id="Image15"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo16 }}" class="img-fluid"
+              alt="nespresso perfetto automation by fero" id="Image16" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo17 }}" class="img-fluid"
+              alt="petrochem automated operation by fero" id="Image17" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo18 }}"
+              class="img-fluid" alt="red sea geteway terminal ai automation by fero" id="Image18"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo19 }}"
+              class="img-fluid" alt="road logistics saudi arabia automation powered by fero" id="Image19"
+              onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo20 }}" class="img-fluid"
+              alt="road logistics saudi arabia automation powered by fero" id="Image20" onclick="imageChange(event)" />
+          </div>
+
+          <div class="slide">
+            <img src="{{ .Params.client_logo21 }}" class="img-fluid"
+              alt="sevenseas automation powered by fero" id="Image21" onclick="imageChange(event)" />
+          </div>
+          <div class="slide">
+            <img src="{{ .Params.client_logo22 }}" class="img-fluid" alt="skyex" id="Image22"
+              onclick="imageChange(event)" />
+          </div>
+        </section>
+      </div>
+
+      <!--       <div class="col-12">
+        <div class="row justify-content-center align-items-center Our-Clients-Information">
+          <div class="col-12 col-md-11 col-xl-4 text-center text-md-start text-xl-center">
+            <img src="https://ferouaeinternalstorageac.blob.core.windows.net/ferowebprodstatic/images/customer_logo/ad_hotel_group_automation_by_fero.png" class="img-fluid"
+              alt="Logo Image" id="updateImg" />
+          </div>
+          <div class="col-12 col-xl-8">
+            <div class="row">
+              <div class="col-12 col-md-4 col-xl-3 text-center mb-4 mb-xl-0">
+                <h4>10,000 <strong>+</strong></h4>
+                <h6>Hours Saved Annually</h6>
+              </div>
+              <div class="col-12 col-md-4 col-xl-3 text-center mb-4 mb-xl-0">
+                <h4>10,000 <strong>+</strong></h4>
+                <h6>Trips Automated</h6>
+              </div>
+              <div class="col-12 col-md-4 col-xl-3 text-center mb-4 mb-xl-0">
+                <h4>17 <strong>+</strong></h4>
+                <h6>Process Automated</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-11 text-xl-center mb-4">
+            <h5>The best solution for anyone who wants to work a flexible schedule but still earn a full-time income.
+            </h5>
+          </div>
+        </div>
+      </div>
+ -->
+      <!--  <div class="col-12 my-5 text-center">
+        <button type="button" class="btn btn-primary Common-Button-1">View All Case Studies</button>
+      </div> -->
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-8">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 text-center">
+        <h4>{{ .Params.technologies_heading }}</h4>
+      </div>
+      <div class="col-12 col-xl-10 mt-xl-5">
+        <div class="row justify-content-center Images-Div">
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image1 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img
+              src="{{ .Params.technologies_image2 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image3 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image4 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img
+              src="{{ .Params.technologies_image5 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img
+              src="{{ .Params.technologies_image6 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img
+              src="{{ .Params.technologies_image7 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image8 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img
+              src="{{ .Params.technologies_image9 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image10 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image11 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image12 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image13 }}"
+              class="img-fluid" />
+          </div>
+          <div class="col-4 col-xl-3 d-flex justify-content-center align-items-center">
+            <img src="{{ .Params.technologies_image14 }}"
+              class="img-fluid" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home-Section-9 mb-5" style="background-image: url(/images/map_1.png);">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 text-center text-md-start">
+        <h4>Become Our Partner</h4>
+      </div>
+      <div class="col-12 col-md-6 text-center text-md-end">
+        <a href="partners/index.html">
+          <button type="button" class="btn btn-primary Common-Button-1">VIEW ALL OUR PARTNERS</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="modal fade Contact-Modal" id="contact-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title Dark-Heading-H4" id="exampleModalLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-4">
+
+        <form method="post" enctype="multipart/form-data" id="FormID">
+          <!--onSubmit="return false"-->
+          <input type="hidden" name="csrfmiddlewaretoken" value="YtFLE3m3rCpaqRd5ljPyYM0nS2xJGflZifhdET2mdSefRXXyaS3PRk3RVvIoJcwt">
+          <div class="row">
+            <div class="col-6">
+              <div class="form-floating mb-4">
+
+                <input type="text" name="full_name" class="form-control" id="floatingInput" maxlength="100" required>
+                <label for="floatingInput">Full Name</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-4">
+                <input type="text" name="company_name" class="form-control" id="floatingInput" maxlength="100" required>
+                <label for="floatingInput">Company Name </label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-4">
+                <select name="user_type" class="form-select" id="floatingInput" required>
+  <option value="" selected>---------</option>
+
+  <option value="as_a_Customer">as a Customer</option>
+
+  <option value="as_a_Partner">as a Partner</option>
+
+</select>
+                <label for="floatingSelect">How would you like to join us</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-4">
+                <input type="email" name="email" placeholder="Email" class="form-control" id="floatingInput" maxlength="200" required>
+                <label for="floatingInput">e-mail</label>
+                
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-4">
+                <input type="text" name="country_name" class="form-control" id="floatingInput" maxlength="100" required>
+                <label for="floatingInput">Country</label>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="form-floating mb-4">
+                <input type="number" name="contact_number" class="form-control" id="floatingInput" maxlength="20" required>
+                <label for="floatingInput">Contact Number with Country Code</label>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="form-floating mb-4">
+                <textarea name="messages" cols="40" rows="10" class="form-control" id="floatingInput" placeholder="Type Your Message Here..." style="height: 100px" maxlength="155" required>
+</textarea>
+                <label for="floatingTextarea2">Type Your Message Here...</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="row mt-2 mb-4">
+            <div class="col-12">
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="vehicle1">
+
+              <label for="vehicle1" class="checkbox-paragraph"> I would like to receive communications
+                about Fero.ai tailored to my interests and preferences,
+                including latest news about products, services, events and promotions. For more
+                information,
+                please see our<span>Privacy Policy</span> </label>
+            </div>
+          </div> -->
+
+          <div class="row mb-2">
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary Modal-Footer-Btn Common-Button-1 w-100 p-3">
+                Submit </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- <div class="modal-footer justify-content-center">
+            <p>Have a different inquiry?You Can Call Us on +971-4-8800161</p>
+          </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{ end }}

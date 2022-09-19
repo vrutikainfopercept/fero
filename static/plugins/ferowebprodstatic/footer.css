@@ -1,0 +1,45 @@
+.Product-Footer {
+  background-color: #112F4F;
+  font-family: "Roboto", sans-serif;
+}
+.Product-Footer .Product-Logo {
+  align-items: center;
+  margin-top: 50px;
+}
+@media (min-width: 992px) {
+  .Product-Footer .Product-Logo {
+    margin-top: 80px;
+  }
+}
+.Product-Footer .Product-Logo i {
+  color: #ffffff;
+  font-size: 28px;
+}
+.Product-Footer .nav .nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 13px;
+  font-family: "Roboto", sans-serif;
+}
+.Product-Footer .Footer-Nav {
+  margin-top: 50px;
+}
+.Product-Footer .Footer-Nav a {
+  text-decoration: none;
+  padding: 0.5rem 0rem;
+}
+.Product-Footer .Footer-Nav p {
+  color: #17B7D0;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+.Product-Footer .Footer-Copy-Text hr {
+  color: #ffffff;
+}
+.Product-Footer .Footer-Copy-Text p {
+  color: #898989;
+  margin-top: 0;
+  font-family: "Roboto", sans-serif;
+}/*# sourceMappingURL=footer.css.map */

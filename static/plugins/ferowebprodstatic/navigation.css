@@ -1,0 +1,194 @@
+.Navigation {
+  background-color: #ffffff !important;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+}
+.Navigation .navbar-toggler {
+  border: 0px;
+  border-color: initial;
+}
+@media (min-width: 1200px) {
+  .Navigation .Navbar-Brand-Mobile {
+    display: none;
+  }
+}
+.Navigation .navbar-brand {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .Navigation .navbar-brand {
+    display: initial;
+  }
+}
+.Navigation .navbar-nav .nav-item.dropdown {
+  position: initial;
+}
+.Navigation .navbar-nav .nav-item.dropdown .dropdown-toggle::after {
+  display: none;
+}
+.Navigation .navbar-nav .nav-item .nav-link {
+  color: #112F4F;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+@media (min-width: 1200px) {
+  .Navigation .navbar-nav .nav-item .nav-link {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+}
+.Navigation .navbar-nav .nav-item .nav-link.active {
+  color: #17B7D0;
+  font-weight: 700;
+}
+.Navigation button {
+  font-weight: 500;
+}
+
+.Sub-Product {
+  top: 99% !important;
+  margin-top: 0px !important;
+  border-right: 0px;
+  border-left: 0px;
+  border-radius: 0px;
+  box-shadow: 0px 16px 20px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 1200px) {
+  .Sub-Product {
+    width: 100%;
+  }
+}
+.Sub-Product h6 {
+  color: #17B7D0;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+@media (min-width: 1200px) {
+  .Sub-Product h6 {
+    height: 44px;
+    margin-bottom: 0px;
+  }
+}
+@media (min-width: 1200px) {
+  .Sub-Product hr {
+    display: none;
+  }
+}
+.Sub-Product .Product-Sub-Link {
+  margin-bottom: 10px;
+}
+.Sub-Product .Product-Sub-Link:hover label {
+  text-decoration: underline;
+}
+.Sub-Product .Product-Sub-Link:hover label i {
+  display: initial;
+}
+.Sub-Product .Product-Sub-Link a {
+  display: flex !important;
+  flex-direction: column !important;
+  text-decoration: none;
+}
+.Sub-Product .Product-Sub-Link a label {
+  color: #112F4F;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.Sub-Product .Product-Sub-Link a label i {
+  display: none;
+  font-size: 22px;
+  line-height: 16px;
+  position: fixed;
+}
+.Sub-Product .Product-Sub-Link a label i::before {
+  position: relative;
+  top: 4px;
+}
+.Sub-Product .Product-Sub-Link a label.TiA-Color {
+  color: #17B7D0;
+}
+.Sub-Product .Product-Sub-Link a p {
+  color: #898989;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0px;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .Sub-Product .Product-Sub-Link a p {
+    display: initial;
+  }
+}
+.Sub-Product .Solutions-Head-Link {
+  text-decoration: none;
+}
+@media (min-width: 1200px) {
+  .Sub-Product .Solutions-Head-Link h6 {
+    height: 26px !important;
+  }
+}
+.Sub-Product .Solutions-Head-Link h6:hover {
+  text-decoration: underline;
+}
+.Sub-Product .Solutions-Head-Link h6:hover i {
+  display: initial;
+}
+.Sub-Product .Solutions-Head-Link h6 i {
+  display: none;
+  font-size: 28px;
+  line-height: 10px;
+}
+.Sub-Product .Solutions-Head-Link h6 i::before {
+  position: relative;
+  top: 4px;
+}
+.Sub-Product .Solutions-Sub-Link {
+  margin-bottom: 4px;
+}
+.Sub-Product .Solutions-Sub-Link label {
+  color: #112F4F;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+.Sub-Product .About-RPA-Sub-Link {
+  margin-bottom: 16px;
+}
+@media (min-width: 1200px) {
+  .Sub-Product .About-RPA-Sub-Link {
+    margin-bottom: 0px;
+  }
+}
+.Sub-Product .About-RPA-Sub-Link:hover label {
+  text-decoration: underline;
+}
+.Sub-Product .About-RPA-Sub-Link:hover label i {
+  display: initial;
+}
+.Sub-Product .About-RPA-Sub-Link a {
+  text-decoration: none;
+}
+.Sub-Product .About-RPA-Sub-Link a label {
+  color: #112F4F;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.Sub-Product .About-RPA-Sub-Link a label i {
+  display: none;
+  font-size: 22px;
+  line-height: 16px;
+}
+.Sub-Product .About-RPA-Sub-Link a label i::before {
+  position: relative;
+  top: 4px;
+}/*# sourceMappingURL=navigation.css.map */

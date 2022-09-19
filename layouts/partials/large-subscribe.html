@@ -1,0 +1,65 @@
+<script>
+
+  async function subscribe() {
+    if ($("#subscribe_email_input").val() == "") {
+      alert("Please enter your email id");
+    } else {
+      var subscribe_email = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+      if (!subscribe_email.test($("#subscribe_email_input").val())) {
+        alert("Please enter valid email address");
+        return;
+      } else {
+        var email = $("#subscribe_email_input").val();
+        var data = {
+          email: email
+        };
+
+        document.getElementsByClassName("subscribe_button")[0].innerHTML = '<div class="text-right"><div style="margin-left: 15px; margin-top: 10px;" class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
+
+        await fetch("https://lbl0d2tpa6.execute-api.us-east-1.amazonaws.com/default/atcults_subscribe", {
+          method: "POST",
+          mode: 'no-cors',
+          body: JSON.stringify(data),
+          headers: {
+            "Content-type": "application/json",
+          }
+        }).then(response => {
+          alert("Successfully Subscribe");
+          document.getElementById("subscribe_email_input").value = "";
+          document.getElementsByClassName("subscribe_button")[0].innerHTML = '<button class="btn btn btn-primary solid form-control" onclick="subscribe()">Subscribe</button>'
+
+        }).catch((err) => {
+          alert("Something Went Wrong, Please Try Later");
+          document.getElementById("subscribe_email_input").value = "";
+          document.getElementsByClassName("subscribe_button")[0].innerHTML = '<button class="btn btn btn-primary solid form-control" onclick="subscribe()">Subscribe</button>'
+        })
+      }
+    }
+
+  }
+</script>
+<style>
+  /* .email_and_button{
+    height: 5rem;
+    border-radius: 6px;
+  } */
+
+  @media (max-width : 991px) {
+    .email_and_button {
+      margin-top: 2rem;
+    }
+  }
+</style>
+
+
+<div class="container mb-5">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-4">
+      <input type="text" class="form-control mb-2" id="subscribe_email_input" style="border-radius: 25px;"
+        placeholder="Enter Email Address" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    </div>
+    <div class="col-md-4 subscribe_button">
+      <button class="btn btn-primary solid form-control" onclick="subscribe()">Subscribe</button>
+    </div>
+  </div>
+</div>

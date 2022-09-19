@@ -1,0 +1,58 @@
+<script>
+  const options = {
+    cookieName: "beyonk_gdpr",
+    cookieConfig: {
+      domain: "",
+      path: "/",
+    },
+
+    heading: "GDPR Notice",
+    description:
+      'We use cookies to offer a better browsing experience, analyze site traffic, personalize content, and serve targeted advertisements. Please review our <a href="/privacypolicy">privacy policy page</a>. By clicking accept, you consent to our privacy policy & use of cookies.',
+
+    acceptLabel: "Confirm all",
+    settingsLabel: "Preferences",
+    closeLabel: "Close window",
+
+    choices: {
+      necessary: {
+        label: "Necessary cookies",
+        description: "Used for cookie control. Can't be turned off.",
+        value: true,
+      },
+      tracking: {
+        label: "Tracking cookies",
+        description: "Used for advertising purposes.",
+        value: true,
+      },
+      analytics: {
+        label: "Analytics cookies",
+        description:
+          "Used to control Google Analytics, a 3rd party tool offered by Google to track user behavior.",
+        value: true,
+      },
+      marketing: {
+        label: "Marketing cookies",
+        description: "Used for marketing data.",
+        value: true,
+      },
+    },
+    showEditIcon: false,
+
+    categories: {
+      analytics: function () {
+        console.log("No analytics cookies specified");
+      },
+      tracking: function () {
+        console.log("No tracking cookies specified");
+      },
+      marketing: function () {
+        console.log("No marketing cookies specified");
+      },
+      necessary: function () {
+        console.log("No necessary cookies specified");
+      },
+    },
+  };
+  GdprConsent.attachBanner(document.body, options);
+</script>

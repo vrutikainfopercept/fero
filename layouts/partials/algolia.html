@@ -1,0 +1,67 @@
+
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+<!-- Include only the reset -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/reset-min.css" integrity="sha256-t2ATOGCtAIZNnzER679jwcFcKYfLlw01gli6F6oszk8=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+<script type="text/javascript">
+    const searchClient = algoliasearch('MLFJ923JWJ', 'a3f1620495e573708a09be48d3632d48');
+
+    const search = instantsearch({
+        indexName: 'atcults_web',
+        searchClient,
+    });
+    
+    const hitTemplate = 
+    '<div class="col-lg-12 col-md-12 mb-4">' + 
+            '<article class="card post-card" id="summary-{{ safeHTML "{{{ key }}}" }}">' + 
+                '<div class="card-body">' + 
+                    '<nav aria-label="breadcrumb">'+
+                        ' <ol class="breadcrumb">'+
+                    '<p class="title-box-yellow title-box-yellow"> {{ if "{{{ types }}}"  }}  <li class="breadcrumb-item active" aria-current="page">{{ safeHTML "{{{ types }}}" }} &nbsp; / &nbsp;</li>  {{ end }} </p> ' + 
+                    '<p class="title-box-yellow title-box-yellow"> {{ if "{{{ categories }}}" }}  <li class="breadcrumb-item active" aria-current="page">{{ safeHTML "{{{ categories }}}" }}</li>  {{ end }} </p> ' + 
+                    '</ol>'+
+                    '</nav>'  +
+                    '<h3 class="h4 mb-4">' +  
+                    '{{ safeHTML "<em><a class=\"post-title\" href=\"{{{ href }}}\">{{{ _highlightResult.title.value }}}</a></em>" }}' + 
+                    '</h3>' +
+                    '<p id="content_text">{{ safeHTML "{{{ _highlightResult.content.value }}}" }} </p>' + 
+                '</div>' + 
+            '</article>' + 
+        '</div>';
+        
+    const missTemplate = 
+        '<div class="col-lg-10 col-md-10 mb-4">' + 
+            '<article class="card post-card">' + 
+                '<div class="card-body">' + 
+                    '<h3 class="h4 mb-4">No results</h3>' + 
+                    '<p>There were no results matching your search terms {{ safeHTML "<em>{{{ query }}}</em>" }}.</p>' + 
+                '</div>' + 
+            '</article>' + 
+        '</div>';
+
+    
+
+
+    search.addWidgets([
+        instantsearch.widgets.searchBox({
+            container: '#searchBox',
+            placeholder: "What Are You Looking For?",
+            showReset: false,
+            showSubmit: false,
+            autofocus: true,
+
+        }),
+        instantsearch.widgets.hits({
+            container: "#searchResults",
+            templates: {
+                item: hitTemplate,
+                empty: missTemplate,
+            },
+
+          }),
+    ]);
+    
+    
+    search.start();
+</script>
